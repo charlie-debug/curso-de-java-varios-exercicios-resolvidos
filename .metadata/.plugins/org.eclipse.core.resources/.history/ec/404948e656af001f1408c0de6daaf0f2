@@ -1,0 +1,31 @@
+package application;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+import java.util.Scanner;
+
+import model.entities.AluguelCarros;
+import model.entities.Veiculo;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Entre com os dados do aluguel");
+		System.out.print("Modelo do carro:");
+		String modelo = sc.nextLine();
+		System.out.print("Retirada (dd/MM/yyyy HH:mm):");
+		LocalDateTime retirada = LocalDateTime.parse(sc.nextLine(),dtf);		
+		System.out.print("Retorno (dd/MM/yyyy HH:mm):");
+		LocalDateTime retorno = LocalDateTime.parse(sc.nextLine(),dtf);
+		System.out.print("Entre com o preço por hora:");
+		AluguelCarros aluguelCarros = new AluguelCarros(retirada, retorno, new Veiculo(modelo));
+		
+		sc.close();
+
+	}
+
+}

@@ -1,0 +1,21 @@
+package application;
+
+
+
+import entities.Printer;
+import entities.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Printer p = new Printer("1080");
+		p.docProcessado("minha carta");
+		p.print("minha carta");
+		
+		Scanner s = new Scanner("2003");
+		s.docProcessado("meu email");
+		System.out.println("resultado scan"+s.scan());
+
+	}
+
+}

@@ -1,0 +1,24 @@
+package application;
+
+import java.util.Arrays;
+
+public class Program {
+	public static int valorGlobal = 3;
+
+	public static void main(String[] args) {
+		int[] vetor = new int[] { 3, 4, 5 };
+		alterarValoresImpares(vetor);
+		System.out.println(Arrays.toString(vetor));
+
+	}
+
+	public static void alterarValoresImpares(int[] numeros) {
+		for (int i = 0; numeros.length < i; i++) {
+			if (numeros[i] % 2 != 0) {
+             numeros[i] += valorGlobal;
+			}
+		}
+
+	}
+
+}

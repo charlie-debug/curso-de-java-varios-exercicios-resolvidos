@@ -1,0 +1,16 @@
+package application;
+
+import entities.Circulo;
+import entities.Figura;
+import entities.Retangulo;
+import entities.enums.Cor;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Figura f1 = new Circulo(Cor.PRETO, 2.0);
+		Figura f2 = new Retangulo(null, null, null)
+
+	}
+
+}

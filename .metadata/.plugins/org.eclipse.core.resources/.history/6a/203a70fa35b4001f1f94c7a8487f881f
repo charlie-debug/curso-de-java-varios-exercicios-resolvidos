@@ -1,0 +1,29 @@
+package entities;
+
+import entities.enums.Cor;
+
+public class Circulo extends Figura {
+	private Double raio;
+
+	
+
+	public Circulo(Cor cor, Double raio) {
+		super(cor);
+		this.raio = raio;
+	}
+
+
+
+	public Circulo() {
+		super();
+	}
+
+
+
+	@Override
+	public double area() {
+		
+		return Math.PI * Math.pow(raio, 2);
+	}
+
+}
